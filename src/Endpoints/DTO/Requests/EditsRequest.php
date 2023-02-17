@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NikoPeikrishvili\ChatGPTClient\Endpoints\DTO\Requests;
+namespace NikoPeikrishvili\OpenAIAPIClient\Endpoints\DTO\Requests;
 
 class EditsRequest
 {

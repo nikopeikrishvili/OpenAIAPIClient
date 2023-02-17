@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-namespace NikoPeikrishvili\ChatGPTClient;
+namespace NikoPeikrishvili\OpenAIAPIClient;
 use Http\Client\Common\HttpMethodsClient;
 use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin;

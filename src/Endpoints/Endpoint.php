@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace NikoPeikrishvili\ChatGPTClient\Endpoints;
+namespace NikoPeikrishvili\OpenAIAPIClient\Endpoints;
 
-use NikoPeikrishvili\ChatGPTClient\OpenAIAPIClient;
+use NikoPeikrishvili\OpenAIAPIClient\OpenAIAPIClient;
 
 abstract class Endpoint
 {

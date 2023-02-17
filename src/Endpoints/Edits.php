@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace NikoPeikrishvili\ChatGPTClient\Endpoints;
+namespace NikoPeikrishvili\OpenAIAPIClient\Endpoints;
 
 use Http\Client\Exception;
-use NikoPeikrishvili\ChatGPTClient\Endpoints\DTO\Requests\EditsRequest;
-use NikoPeikrishvili\ChatGPTClient\ResponseMediator;
+use NikoPeikrishvili\OpenAIAPIClient\Endpoints\DTO\Requests\EditsRequest;
+use NikoPeikrishvili\OpenAIAPIClient\ResponseMediator;
 
 class Edits extends Endpoint
 {

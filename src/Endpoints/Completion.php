@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace NikoPeikrishvili\ChatGPTClient\Endpoints;
+namespace NikoPeikrishvili\OpenAIAPIClient\Endpoints;
 
-use NikoPeikrishvili\ChatGPTClient\Endpoints\DTO\Requests\CompletionRequest;
-use NikoPeikrishvili\ChatGPTClient\ResponseMediator;
+use NikoPeikrishvili\OpenAIAPIClient\Endpoints\DTO\Requests\CompletionRequest;
+use NikoPeikrishvili\OpenAIAPIClient\ResponseMediator;
 
 class Completion extends Endpoint
 {

@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace NikoPeikrishvili\ChatGPTClient;
+namespace NikoPeikrishvili\OpenAIAPIClient;
 
 use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin\BaseUriPlugin;
 use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Message\UriFactory;
-use NikoPeikrishvili\ChatGPTClient\Endpoints\Completion;
-use NikoPeikrishvili\ChatGPTClient\Endpoints\Edits;
-use NikoPeikrishvili\ChatGPTClient\Endpoints\Model;
-use NikoPeikrishvili\ChatGPTClient\Endpoints\Models;
+use NikoPeikrishvili\OpenAIAPIClient\ClientBuilder;
+use NikoPeikrishvili\OpenAIAPIClient\Endpoints\Completion;
+use NikoPeikrishvili\OpenAIAPIClient\Endpoints\Edits;
+use NikoPeikrishvili\OpenAIAPIClient\Endpoints\Models;
 
 final class OpenAIAPIClient
 {
     private ClientBuilder $clientBuilder;
     private string $apiUrl = 'https://api.openai.com/v1/';
-    private string $userAgent = 'NikoPeikrishvili\ChatGPTClient SDK';
+    private string $userAgent = 'NikoPeikrishvili\OpenAIAPIClient SDK';
 
     public function __construct(
         private readonly string $apiKey,

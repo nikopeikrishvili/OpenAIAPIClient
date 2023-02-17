@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NikoPeikrishvili\ChatGPTClient;
+namespace NikoPeikrishvili\OpenAIAPIClient;
 
 use Psr\Http\Message\ResponseInterface;
 
