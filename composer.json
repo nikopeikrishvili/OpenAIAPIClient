@@ -6,12 +6,15 @@
     },
     "autoload": {
         "psr-4": {
-            "NikoPeikrishvili\\OpenAIAPIClient\\": "src/"
+            "NikoPeikrishvili\\OpenAIAPIClient\\": "src/",
+            "NikoPeikrishvili\\OpenAIAPIClient\\Tests\\": "tests/"
         }
     },
     "require-dev": {
         "php-http/curl-client": "^2.2",
-        "laminas/laminas-diactoros": "^2.24"
+        "laminas/laminas-diactoros": "^2.24",
+        "php-http/mock-client": "^1.5",
+        "phpunit/phpunit": "^9"
     },
     "config": {
         "allow-plugins": {
