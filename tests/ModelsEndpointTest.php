@@ -30,7 +30,7 @@ class ModelsEndpointTest extends TestCase
             ]
         ]
     ];
-    private function getValidResponse(): JsonResponse
+    private function getValidResponseForSingleModel(): JsonResponse
     {
         return new JsonResponse(
             $this->data,
@@ -38,15 +38,15 @@ class ModelsEndpointTest extends TestCase
             ['Content-Type' => ['application/json']]
         );
     }
-    public function testThatModelTypeIsReturned()
+    public function testThatModelTypeIsReturnedForSingleModel()
     {
         $apiClient = $this->givenAPIClient();
-        $this->mockClient->addResponse($this->getValidResponse());
+        $this->mockClient->addResponse($this->getValidResponseForSingleModel());
         $model = $apiClient->models()->get('test');
         $this->assertInstanceOf(Model::class, $model);
     }
 
-    public function testThatModelHasPermissionCollection()
+    public function testThatSingleModelHasPermissionCollection()
     {
         $apiClient = $this->givenAPIClient();
         $this->mockClient->addResponse($this->getValidResponse());
@@ -56,7 +56,7 @@ class ModelsEndpointTest extends TestCase
         $this->assertCount(1, $model->getPermissionCollection());
     }
 
-    public function testDataIsProperlyAssigned()
+    public function testDataIsProperlyAssignedForSingleModel()
     {
         $apiClient = $this->givenAPIClient();
         $this->mockClient->addResponse($this->getValidResponse());
