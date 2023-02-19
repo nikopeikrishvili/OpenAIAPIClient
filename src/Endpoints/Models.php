@@ -9,9 +9,10 @@ use NikoPeikrishvili\OpenAIAPIClient\ResponseMediator;
 
 final class Models extends Endpoint
 {
-    public function all(): array
+    public function all(): DTO\Responses\Models
     {
-        return ResponseMediator::getContent($this->chatGPT->getHttpClient()->get('/models'));
+        $responseAsArray =  ResponseMediator::getContent($this->chatGPT->getHttpClient()->get('/models'));
+        return new DTO\Responses\Models($responseAsArray);
     }
 
     public function get($model): Model
