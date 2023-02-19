@@ -6,7 +6,7 @@ use IteratorAggregate;
 use ArrayIterator;
 use Traversable;
 
-class ModelCollection implements IteratorAggregate
+class ModelCollection implements IteratorAggregate, \Countable
 {
     private array $models = [];
 
@@ -18,5 +18,10 @@ class ModelCollection implements IteratorAggregate
     public function getIterator(): Traversable
     {
         return new ArrayIterator($this->models);
+    }
+
+    public function count(): int
+    {
+        return count($this->models);
     }
 }
